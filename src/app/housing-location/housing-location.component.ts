@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocation } from '../housinglocation';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-housing-location',
@@ -18,9 +18,11 @@ import { Router, RouterModule } from '@angular/router';
       <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
     </section>
   `,
-  styleUrl: './housing-location.component.css'
+  styleUrls: ['./housing-location.component.css'],
 })
+
 export class HousingLocationComponent {
-  // The "!" is there because the input is expecting a value to be passed, it allows it to be Non-Nullable.
+
   @Input() housingLocation!: HousingLocation;
+
 }
