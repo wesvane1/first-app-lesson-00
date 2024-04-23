@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
-import { Router, RouterModule } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     HomeComponent,
-    RouterModule,
+    RouterLink,
+    RouterOutlet
   ],
   // This [template] changes the code that is displayed on the site, essentially changes the HTML
   template: `
